@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      hostNetwork: true
+      containers:
+        - name: deployment
+          image: deployment:{VERSION}
+          envFrom:
+            - configMapRef:
+                name: deployment-config
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          hostPath:
+            path: /home/tonix/docker/deploy/data
+            type: DirectoryOrCreate
