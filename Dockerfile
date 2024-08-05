@@ -6,4 +6,4 @@ COPY target/Deployment-${VERSION}.jar /app.jar
 
 EXPOSE 8088
 
-CMD ["java", "-jar", "/app.jar"]
+CMD ["java", "-jar", "/app.jar", "--spring.profiles.active=${PROFILE}"]
