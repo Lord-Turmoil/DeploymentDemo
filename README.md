@@ -4,4 +4,4 @@
 
 ---
 
-Repository for [Deployment Practice With Kubernetes](https://www.tonys-studio.top/posts/Deployment-Practice-with-Kubernetes/).
+Repository for [Deployment Practice With Kubernetes](https://www.tonys-studio.top/posts/Deployment-Practice-with-Kubernetes/) ([Backup](https://lord-turmoil.github.io/posts/Deployment-Practice-with-Kubernetes/)).
